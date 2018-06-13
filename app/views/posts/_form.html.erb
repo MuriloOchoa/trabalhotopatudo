@@ -4,29 +4,29 @@
       <h2><%= pluralize(post.errors.count, "error") %> prohibited this post from being saved:</h2>
 
       <ul>
-      <% post.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
+        <% post.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
       </ul>
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :title %>
-    <%= form.text_field :title %>
-  </div>
-
-  <div class="field">
-    <%= form.label :subject %>
-    <%= form.text_field :subject %>
-  </div>
-
-  <div class="field">
+  <div class="form-group">
     <%= form.label :text %>
-    <%= form.text_area :text %>
+    <%= form.text_area :text, size: "60x12", id: :post_text, class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :subject %>
+    <%= form.text_field :subject, id: :post_subject, class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :title %>
+    <%= form.text_field :title, id: :post_title, class: 'form-control' %>
   </div>
 
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit :Submit, class: 'btn btn-success' %>
   </div>
 <% end %>

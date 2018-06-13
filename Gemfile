@@ -35,6 +35,10 @@ gem 'jquery-rails'
 # Autenticacao
 gem 'devise'
 
+# cancancancancancancancancancancancancancan²
+
+gem 'cancancan', '~> 2.0'
+
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
 

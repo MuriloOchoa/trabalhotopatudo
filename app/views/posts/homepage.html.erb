@@ -1,0 +1,13 @@
+<div class="col-xs-12">
+  <% @posts.all.each do |post| %>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h2><%= post.title %></h2>
+        <p>Assunto: <%= post.subject %></p>
+      </div>
+      <div class="panel-body">
+        <p>texto: <%= post.text %></p>
+      </div>
+  <% end %>
+  </div>
+</div>

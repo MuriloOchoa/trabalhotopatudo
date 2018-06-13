@@ -17,6 +17,10 @@ class PostsController < ApplicationController
     @post = Post.new
   end
 
+  def homepage
+    @posts = Post.all
+  end
+
   # GET /posts/1/edit
   def edit
   end

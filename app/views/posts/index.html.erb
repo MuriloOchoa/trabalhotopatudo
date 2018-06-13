@@ -1,31 +1,39 @@
-<p id="notice"><%= notice %></p>
+<div class="container-fluid">
+  <p id="notice"><%= notice %></p>
 
-<h1>Posts</h1>
+  <h1>Posts</h1>
 
-<table>
-  <thead>
+  <hr>
+
+
+  <table class="table">
+    <thead>
     <tr>
-      <th>Title</th>
-      <th>Subject</th>
       <th>Text</th>
+      <th>Subject</th>
+      <th>Titile</th>
       <th colspan="3"></th>
     </tr>
-  </thead>
+    </thead>
 
-  <tbody>
+    <tbody>
     <% @posts.each do |post| %>
       <tr>
-        <td><%= post.title %></td>
-        <td><%= post.subject %></td>
         <td><%= post.text %></td>
-        <td><%= link_to 'Show', post %></td>
-        <td><%= link_to 'Edit', edit_post_path(post) %></td>
-        <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= post.subject %></td>
+        <td><%= post.title %></td>
+        <td>
+          <div class="btn-group">
+            <%= link_to 'Exibir', post, :class => "btn btn-primary" %></button>
+            <%= link_to 'Editar', edit_post_path(post), :class => "btn btn-warning" %>
+            <%= link_to 'Excluir', post, :class => "btn btn-danger", method: :delete, data: {confirm: 'Are you sure?'} %></button>
+          </div>
+        </td>
       </tr>
     <% end %>
-  </tbody>
-</table>
+    </tbody>
+  </table>
+</div>
 
-<br>
-
-<%= link_to 'New Post', new_post_path %>
+<hr>
+<%= link_to 'Novo Post', new_post_path, :class => "btn btn-success" %>
