@@ -36,8 +36,13 @@ gem 'jquery-rails'
 gem 'devise'
 
 # cancancancancancancancancancancancancancan²
-
 gem 'cancancan', '~> 2.0'
+
+
+# paperclip
+gem "paperclip", "~> 6.0.0"
+# ckeditor
+gem 'ckeditor'
 
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
